@@ -1,4 +1,4 @@
-#test demo website https://www.saucedemo.com/ by Aimluffy :D
+#test login demo website https://www.saucedemo.com/
 
 *** Settings ***
 Library    SeleniumLibrary
