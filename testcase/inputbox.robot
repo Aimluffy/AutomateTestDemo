@@ -1,28 +1,27 @@
-#Test Text Box/Input Box and Verify Title Of the page
+#Test Text Box/Input Box and Verify Title Of the page, and wait until keyword
 
 *** Settings ***
 Library    SeleniumLibrary
 
 *** Variables ***
 ${browser}    Chrome
-${url}    https://www.saucedemo.com/
-${id}    standard_user
-${pass}    secret_sauce
+${url}    https://demo.nopcommerce.com/
 
 *** Test Cases ***
 TestingInputBox
     open browser    ${url}    ${browser}
     maximize browser window
-    title should be    Swag Labs
-    ${"Username_txt"}    set variable    id:user-name
+    title should be    nopCommerce demo store
+    click link    xpath://a[contains(text(),'Log in')]
+    ${"email_txt"}    set variable    id:Email
 
-    element should be visible    ${"Username_txt"}
-    element should be enable    ${"Username_txt"}
+    SeleniumLibrary.Element Should Be Visible    ${"email_txt"}
+    SeleniumLibrary.Element Should Be Enabled    ${"email_txt"}
 
-    input text ${"username_txt"}    ${id}
-    sleep 5
-    clear element text    ${"Username_txt"}
-    sleep 3
+    input text    ${"email_txt"}    aimluffy@gmail.com
+    Wait Until Element Is Visible    //input[@id='Email']    5s
+    clear element text    ${"email_txt"}
+    Wait Until Element Does Not Contain    //input[@id='Email']    5s
     close browser
 
 *** Keywords ***
