@@ -1,88 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-14T17:38:37.066922" rpa="false" schemaversion="5">
-<suite id="s1" name="Inputbox" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\inputbox.robot">
-<test id="s1-t1" name="TestingInputBox" line="11">
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-14T19:04:29.108854" rpa="false" schemaversion="5">
+<suite id="s1" name="Dropdowns" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\dropdowns.robot">
+<test id="s1-t1" name="Test Drop-Down and Lists" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-14T17:38:37.185625" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2024-05-14T19:04:29.228551" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-14T17:38:37.185625" elapsed="2.543660"/>
+<status status="PASS" start="2024-05-14T19:04:29.228054" elapsed="2.610168"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-14T17:38:39.729781" elapsed="0.027316"/>
+<status status="PASS" start="2024-05-14T19:04:31.838222" elapsed="0.040726"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-14T17:38:39.760077" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<arg>nopCommerce demo store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-05-14T17:38:39.757594" elapsed="0.002483"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-14T19:04:31.878948" elapsed="0.000497"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-14T17:38:39.760574" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
-<arg>xpath://a[contains(text(),'Log in')]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-14T17:38:39.760574" elapsed="0.439853"/>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-14T19:04:31.879445" level="INFO">Selecting options from selection list 'Skills' by label Troubleshooting.</msg>
+<arg>Skills</arg>
+<arg>Troubleshooting</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-14T19:04:31.879445" elapsed="7.113297"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-05-14T17:38:40.200924" level="INFO">${"email_txt"} = id:Email</msg>
-<var>${"email_txt"}</var>
-<arg>id:Email</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.200924" elapsed="0.000000"/>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-14T19:04:38.996218" level="INFO">Selecting options from selection list 'Skills' by index 2.</msg>
+<arg>Skills</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-05-14T19:04:38.995227" elapsed="10.164384"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-05-14T17:38:40.217314" level="INFO">Element 'id:Email' is displayed.</msg>
-<arg>${"email_txt"}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.200924" elapsed="0.016390"/>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-14T19:04:49.163085" level="INFO">Selecting options from selection list 'Skills' by value Web Page Design.</msg>
+<arg>Skills</arg>
+<arg>Web Page Design</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-14T19:04:49.162095" elapsed="7.146313"/>
 </kw>
-<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.217810" elapsed="0.015895"/>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-14T19:04:56.308901" level="INFO">Selecting options from selection list 'country' by label Japan.</msg>
+<arg>country</arg>
+<arg>Japan</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-14T19:04:56.308901" elapsed="7.110234"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-14T17:38:40.234201" level="INFO">Typing text 'aimluffy@gmail.com' into text field 'id:Email'.</msg>
-<arg>${"email_txt"}</arg>
-<arg>aimluffy@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.234201" elapsed="0.050660"/>
+<kw name="Unselect From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-14T19:05:03.419629" level="INFO">Un-selecting options from selection list 'country' by label Japan.</msg>
+<msg time="2024-05-14T19:05:07.513697" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-14T19:05:07.514692" level="FAIL">Un-selecting options works only with multi-selection lists.</msg>
+<arg>country</arg>
+<arg>Japan</arg>
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<status status="FAIL" start="2024-05-14T19:05:03.419629" elapsed="4.098533">Un-selecting options works only with multi-selection lists.</status>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//input[@id='Email']</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.284861" elapsed="0.009933"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.295290" elapsed="0.019867"/>
-</kw>
-<kw name="Wait Until Element Does Not Contain" owner="SeleniumLibrary">
-<arg>//input[@id='Email']</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` does not contain ``text``.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.315157" elapsed="0.010430"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-14T17:38:40.325587" elapsed="2.065550"/>
-</kw>
-<status status="PASS" start="2024-05-14T17:38:37.185129" elapsed="5.207005"/>
+<status status="FAIL" start="2024-05-14T19:04:29.227557" elapsed="38.291599">Un-selecting options works only with multi-selection lists.</status>
 </test>
-<status status="PASS" start="2024-05-14T17:38:37.067915" elapsed="5.326205"/>
+<status status="FAIL" start="2024-05-14T19:04:29.109848" elapsed="38.411294"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Inputbox">Inputbox</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Dropdowns">Dropdowns</stat>
 </suite>
 </statistics>
 <errors>
