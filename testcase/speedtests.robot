@@ -18,7 +18,7 @@ Register test
     maximize browser window
     #for set speed every statement that code do
     #set selenium speed    ${DELAY}
-    set selenium timeout    10 seconds    #set timeout 5 -> 10 secs
+    #set selenium timeout    10 seconds    #set timeout 5 -> 10 secs
     wait until page contains    Register    #normal maximum times is 5 secs
 
     set selenium implicit wait    10 seconds    #wait until selenium find element then time out

@@ -1,185 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-20T18:51:08.656638" rpa="false" schemaversion="5">
-<suite id="s1" name="Speedtests" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\speedtests.robot">
-<test id="s1-t1" name="Register test" line="12">
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-31T04:03:32.111218" rpa="false" schemaversion="5">
+<suite id="s1" name="Tabwindow" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\tabwindow.robot">
+<test id="s1-t1" name="TabbedWindowsTest" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:08.777825" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<msg time="2024-05-31T04:03:32.232901" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Windows.html'.</msg>
+<arg>https://demo.automationtesting.in/Windows.html</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-20T18:51:08.777825" elapsed="4.095039"/>
+<status status="PASS" start="2024-05-31T04:03:32.232901" elapsed="4.557330"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:03:36.791723" level="INFO">Clicking element 'xpath://body/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/button[1]'.</msg>
+<arg>xpath://body/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/button[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T04:03:36.790726" elapsed="0.061090"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>Selenium</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-31T04:03:36.852313" elapsed="0.661468"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:03:37.514278" level="INFO">Clicking element 'xpath://a[contains(text(),'Register now!')]'.</msg>
+<arg>xpath://a[contains(text(),'Register now!')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T04:03:37.514278" elapsed="0.042714"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-05-31T04:03:37.557488" elapsed="6.182817"/>
+</kw>
+<status status="PASS" start="2024-05-31T04:03:32.232405" elapsed="11.509885"/>
+</test>
+<test id="s1-t2" name="MultipleBrowsersTest" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:03:43.748249" level="INFO">Opening browser 'Chrome' to base url 'https://github.com/Aimluffy'.</msg>
+<arg>https://github.com/Aimluffy</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-31T04:03:43.747256" elapsed="2.212693"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-20T18:51:12.873360" elapsed="0.038244"/>
+<status status="PASS" start="2024-05-31T04:03:45.960445" elapsed="0.030793"/>
 </kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>10 seconds</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-05-20T18:51:12.911604" elapsed="0.000994"/>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:03:45.991734" level="INFO">Opening browser 'Chrome' to base url 'https://www.bing.com/'.</msg>
+<arg>https://www.bing.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-31T04:03:45.991734" elapsed="1.789696"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Register</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-05-20T18:51:12.912598" elapsed="0.007449"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.781927" elapsed="0.030297"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10 seconds</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-20T18:51:12.920545" elapsed="0.000497"/>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.812721" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:12.922035" level="INFO">Typing text 'Aim' into text field 'xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/input[1]'.</msg>
-<arg>xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/input[1]</arg>
-<arg>Aim</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:12.921538" elapsed="0.055129"/>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:03:47.817192" level="INFO">${title1} = Aimluffy (Aimluffy) · GitHub</msg>
+<var>${title1}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.812721" elapsed="0.004471"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:12.977164" level="INFO">Typing text 'Luffy' into text field 'xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/input[1]'.</msg>
-<arg>xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/input[1]</arg>
-<arg>Luffy</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:12.977164" elapsed="0.042217"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${title1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.817192" elapsed="0.000496"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.020374" level="INFO">Typing text 'Grandline' into text field 'xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[2]/div[1]/textarea[1]'.</msg>
-<arg>xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[2]/div[1]/textarea[1]</arg>
-<arg>Grandline</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.019878" elapsed="0.039733"/>
+<kw name="Switch Browser" owner="SeleniumLibrary">
+<arg>2</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.817688" elapsed="0.000496"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.060108" level="INFO">Typing text 'aim.luffy@gmail.com' into text field 'xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/input[1]'.</msg>
-<arg>xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/input[1]</arg>
-<arg>aim.luffy@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.060108" elapsed="0.060096"/>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:03:47.820668" level="INFO">${title2} = Bing</msg>
+<var>${title2}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.818184" elapsed="0.002980"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.120701" level="INFO">Typing text '0841234567' into text field 'xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]'.</msg>
-<arg>xpath://body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]</arg>
-<arg>0841234567</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.120701" elapsed="0.047679"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${title2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.821164" elapsed="0.000497"/>
 </kw>
-<kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.168878" level="INFO">Selecting 'Male' from radio button 'radiooptions'.</msg>
-<arg>radiooptions</arg>
-<arg>Male</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.168878" elapsed="0.046188"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-05-31T04:03:47.821661" elapsed="12.354428"/>
 </kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.215565" level="INFO">Selecting checkbox 'Cricket'.</msg>
-<arg>Cricket</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.215565" elapsed="0.026322"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.242384" level="INFO">Selecting checkbox 'Movies'.</msg>
-<arg>Movies</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.242384" elapsed="0.026819"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.269702" level="INFO">Selecting checkbox 'Hockey'.</msg>
-<arg>Hockey</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.269702" elapsed="0.026323"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.297020" level="INFO">Clicking element 'xpath=//div[@id="msdd"]'.</msg>
-<arg>xpath=//div[@id="msdd"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.296521" elapsed="0.034270"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.331287" level="INFO">Clicking element 'xpath=//a[text()="Thai"]'.</msg>
-<arg>xpath=//a[text()="Thai"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.331287" elapsed="0.022847"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.354630" level="INFO">Clicking element 'xpath=//div[@id="msdd"]'.</msg>
-<arg>xpath=//div[@id="msdd"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.354630" elapsed="0.024338"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.379464" level="INFO">Clicking element 'xpath=//a[text()="English"]'.</msg>
-<arg>xpath=//a[text()="English"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.379464" elapsed="0.029799"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.409760" level="INFO">Selecting options from selection list 'Skills' by label Troubleshooting.</msg>
-<arg>Skills</arg>
-<arg>Troubleshooting</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.409760" elapsed="0.046190"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.456447" level="INFO">Selecting options from selection list 'country' by label Japan.</msg>
-<arg>country</arg>
-<arg>Japan</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.456447" elapsed="0.032284"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.489228" level="INFO">Selecting options from selection list 'yearbox' by label 1997.</msg>
-<arg>yearbox</arg>
-<arg>1997</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.489228" elapsed="0.031289"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.521016" level="INFO">Clicking element 'xpath=//body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[11]/div[2]/select[1]'.</msg>
-<arg>xpath=//body/section[@id='section']/div[1]/div[1]/div[2]/form[1]/div[11]/div[2]/select[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.520517" elapsed="0.029303"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.550318" level="INFO">Clicking element 'xpath=//option[contains(text(),'December')]'.</msg>
-<arg>xpath=//option[contains(text(),'December')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.550318" elapsed="0.016389"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.567205" level="INFO">Selecting options from selection list 'daybox' by label 3.</msg>
-<arg>daybox</arg>
-<arg>3</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.567205" elapsed="0.036257"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.603958" level="INFO">Typing text '1234567890' into text field 'xpath://input[@id='firstpassword']'.</msg>
-<arg>xpath://input[@id='firstpassword']</arg>
-<arg>1234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.603462" elapsed="0.042216"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T18:51:13.646175" level="INFO">Typing text '1234567890' into text field 'xpath://input[@id='secondpassword']'.</msg>
-<arg>xpath://input[@id='secondpassword']</arg>
-<arg>1234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T18:51:13.646175" elapsed="0.048673"/>
-</kw>
-<status status="PASS" start="2024-05-20T18:51:08.777328" elapsed="4.918017"/>
+<status status="PASS" start="2024-05-31T04:03:43.745767" elapsed="16.432308"/>
 </test>
-<status status="PASS" start="2024-05-20T18:51:08.658128" elapsed="5.038218"/>
+<status status="PASS" start="2024-05-31T04:03:32.112212" elapsed="28.069344"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Speedtests">Speedtests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tabwindow">Tabwindow</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-05-31T04:03:32.108735" level="WARN">Error in file 'C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\tabwindow.robot' on line 2: Singular section headers like '*** setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
 </errors>
 </robot>
