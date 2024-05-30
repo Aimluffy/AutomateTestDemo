@@ -1,111 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-31T04:03:32.111218" rpa="false" schemaversion="5">
-<suite id="s1" name="Tabwindow" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\tabwindow.robot">
-<test id="s1-t1" name="TabbedWindowsTest" line="9">
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-31T04:24:21.331537" rpa="false" schemaversion="5">
+<suite id="s1" name="Navigationnal" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\navigationnal.robot">
+<test id="s1-t1" name="NavigationTest" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:32.232901" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Windows.html'.</msg>
-<arg>https://demo.automationtesting.in/Windows.html</arg>
+<msg time="2024-05-31T04:24:21.454213" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.co.th/'.</msg>
+<arg>https://www.google.co.th/</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-31T04:03:32.232901" elapsed="4.557330"/>
+<status status="PASS" start="2024-05-31T04:24:21.454213" elapsed="2.042623"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:36.791723" level="INFO">Clicking element 'xpath://body/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/button[1]'.</msg>
-<arg>xpath://body/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/button[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-31T04:03:36.790726" elapsed="0.061090"/>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:24:23.499319" level="INFO">${log} = https://www.google.co.th/</msg>
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-31T04:24:23.496836" elapsed="0.002483"/>
 </kw>
-<kw name="Switch Window" owner="SeleniumLibrary">
-<arg>Selenium</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-05-31T04:03:36.852313" elapsed="0.661468"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-31T04:24:23.499319" elapsed="0.000497"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:37.514278" level="INFO">Clicking element 'xpath://a[contains(text(),'Register now!')]'.</msg>
-<arg>xpath://a[contains(text(),'Register now!')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-31T04:03:37.514278" elapsed="0.042714"/>
-</kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-31T04:03:37.557488" elapsed="6.182817"/>
-</kw>
-<status status="PASS" start="2024-05-31T04:03:32.232405" elapsed="11.509885"/>
-</test>
-<test id="s1-t2" name="MultipleBrowsersTest" line="16">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:43.748249" level="INFO">Opening browser 'Chrome' to base url 'https://github.com/Aimluffy'.</msg>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:24:23.499816" level="INFO">Opening url 'https://github.com/Aimluffy'</msg>
 <arg>https://github.com/Aimluffy</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-31T04:03:43.747256" elapsed="2.212693"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-31T04:24:23.499816" elapsed="1.060992"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-31T04:03:45.960445" elapsed="0.030793"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:45.991734" level="INFO">Opening browser 'Chrome' to base url 'https://www.bing.com/'.</msg>
-<arg>https://www.bing.com/</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-31T04:03:45.991734" elapsed="1.789696"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.781927" elapsed="0.030297"/>
-</kw>
-<kw name="Switch Browser" owner="SeleniumLibrary">
-<arg>1</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.812721" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:47.817192" level="INFO">${title1} = Aimluffy (Aimluffy) · GitHub</msg>
-<var>${title1}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.812721" elapsed="0.004471"/>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:24:24.563789" level="INFO">${log} = https://github.com/Aimluffy</msg>
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-31T04:24:24.560808" elapsed="0.002981"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${title1}</arg>
+<arg>${log}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.817192" elapsed="0.000496"/>
+<status status="PASS" start="2024-05-31T04:24:24.564285" elapsed="0.000000"/>
 </kw>
-<kw name="Switch Browser" owner="SeleniumLibrary">
-<arg>2</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.817688" elapsed="0.000496"/>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-05-31T04:24:24.564782" elapsed="0.008444"/>
 </kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:03:47.820668" level="INFO">${title2} = Bing</msg>
-<var>${title2}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.818184" elapsed="0.002980"/>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-31T04:24:24.576702" level="INFO">${log} = https://www.google.co.th/</msg>
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-31T04:24:24.573226" elapsed="0.003476"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${title2}</arg>
+<arg>${log}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.821164" elapsed="0.000497"/>
+<status status="PASS" start="2024-05-31T04:24:24.577198" elapsed="0.000000"/>
 </kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-31T04:03:47.821661" elapsed="12.354428"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-31T04:24:24.577695" elapsed="2.095208"/>
 </kw>
-<status status="PASS" start="2024-05-31T04:03:43.745767" elapsed="16.432308"/>
+<status status="PASS" start="2024-05-31T04:24:21.453219" elapsed="5.220179"/>
 </test>
-<status status="PASS" start="2024-05-31T04:03:32.112212" elapsed="28.069344"/>
+<status status="PASS" start="2024-05-31T04:24:21.332530" elapsed="5.341862"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Tabwindow">Tabwindow</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Navigationnal">Navigationnal</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-31T04:03:32.108735" level="WARN">Error in file 'C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\tabwindow.robot' on line 2: Singular section headers like '*** setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
+<msg time="2024-05-31T04:24:21.328557" level="WARN">Error in file 'C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\navigationnal.robot' on line 2: Singular section headers like '*** setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
 </errors>
 </robot>
