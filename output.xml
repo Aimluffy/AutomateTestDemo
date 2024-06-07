@@ -1,64 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-05-31T04:24:21.331537" rpa="false" schemaversion="5">
-<suite id="s1" name="Navigationnal" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\navigationnal.robot">
-<test id="s1-t1" name="NavigationTest" line="9">
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-06-06T18:27:59.970873" rpa="false" schemaversion="5">
+<suite id="s1" name="Scrollingpage" source="C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\scrollingpage.robot">
+<test id="s1-t1" name="ScrollingTest" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:24:21.454213" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.co.th/'.</msg>
-<arg>https://www.google.co.th/</arg>
-<arg>Chrome</arg>
+<msg time="2024-06-06T18:28:00.099872" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Meme'.</msg>
+<arg>https://en.wikipedia.org/wiki/Meme</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-31T04:24:21.454213" elapsed="2.042623"/>
+<status status="PASS" start="2024-06-06T18:28:00.099872" elapsed="1.956942"/>
 </kw>
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:24:23.499319" level="INFO">${log} = https://www.google.co.th/</msg>
-<var>${log}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-05-31T04:24:23.496836" elapsed="0.002483"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-06T18:28:02.056814" elapsed="0.082999"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${log}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-31T04:24:23.499319" elapsed="0.000497"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://span[@id='Memes_as_discrete_units']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-06-06T18:28:02.140314" elapsed="0.357074"/>
 </kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:24:23.499816" level="INFO">Opening url 'https://github.com/Aimluffy'</msg>
-<arg>https://github.com/Aimluffy</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-31T04:24:23.499816" elapsed="1.060992"/>
-</kw>
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:24:24.563789" level="INFO">${log} = https://github.com/Aimluffy</msg>
-<var>${log}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-05-31T04:24:24.560808" elapsed="0.002981"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${log}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-31T04:24:24.564285" elapsed="0.000000"/>
-</kw>
-<kw name="Go Back" owner="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2024-05-31T04:24:24.564782" elapsed="0.008444"/>
-</kw>
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-05-31T04:24:24.576702" level="INFO">${log} = https://www.google.co.th/</msg>
-<var>${log}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-05-31T04:24:24.573226" elapsed="0.003476"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${log}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-31T04:24:24.577198" elapsed="0.000000"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-31T04:24:24.577695" elapsed="2.095208"/>
-</kw>
-<status status="PASS" start="2024-05-31T04:24:21.453219" elapsed="5.220179"/>
+<status status="PASS" start="2024-06-06T18:28:00.099372" elapsed="2.400514"/>
 </test>
-<status status="PASS" start="2024-05-31T04:24:21.332530" elapsed="5.341862"/>
+<status status="PASS" start="2024-06-06T18:27:59.971873" elapsed="2.531511"/>
 </suite>
 <statistics>
 <total>
@@ -67,10 +29,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Navigationnal">Navigationnal</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scrollingpage">Scrollingpage</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-31T04:24:21.328557" level="WARN">Error in file 'C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\navigationnal.robot' on line 2: Singular section headers like '*** setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
+<msg time="2024-06-06T18:27:59.967373" level="WARN">Error in file 'C:\Users\aimai\OneDrive\Desktop\aimluffy_test\AutomateTestDemo\testcase\scrollingpage.robot' on line 1: Singular section headers like '*** setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
 </errors>
 </robot>
